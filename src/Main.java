@@ -23,77 +23,74 @@ public class Main {
             System.out.print(i + " ");
         }
         System.out.println("");
+        System.out.println("");
 
         System.out.println("задание 3");
         int start = 12000000;
         int birthRate = 17;
         int deathRate = 8;
-        int a3 = 0;
+        int ratio = 0;
         for (int i = 1; i <= 10; i++) {
             System.out.println("Год " + i + ", численность населения составляет " + start);
-            a3 = start / 1000;
-            start += a * birthRate - a3 * deathRate;
+            ratio = start / 1000;
+            start += ratio * birthRate - ratio * deathRate;
         }
         System.out.println("");
 
         System.out.println("задание 4");
         int start4 = 15000;
-        int i = 1;
+        int month4 = 1;
         do {
-            System.out.println("Месяц " + i + ", сумма накоплений: " + start4 + " руб.");
-            i += 1;
+            System.out.println("Месяц " + month4 + ", сумма накоплений: " + start4 + " руб.");
+            month4 += 1;
             start4 += start4 * 0.07;
         } while (start4 < 12000000);
-        System.out.println("Чтобы накопить 12000000 рублей, потребуется " + i + " месяцев");
+        System.out.println("Чтобы накопить 12000000 рублей, потребуется " + month4 + " месяцев");
         System.out.println("");
 
         System.out.println("задание 5");
         int start5 = 15000;
-        int l = 1;
+        int period = 1;
         do {
             start5 += start5 * 0.07;
-            l += 1;
-            if (l % 6 == 0) {
-                System.out.println("Месяц " + l + ", сумма накоплений: " + start5 + " руб.");
+            period += 1;
+            if (period % 6 == 0) {
+                System.out.println("Месяц " + period + ", сумма накоплений: " + start5 + " руб.");
             }
         } while (start5 < 12000000);
-        System.out.println("Чтобы накопить 12000000 рублей, потребуется " + l + " месяцев");
+        System.out.println("Чтобы накопить 12000000 рублей, потребуется " + period + " месяцев");
         System.out.println("");
 
         System.out.println("задание 6");
-        int sum5 = 15000;
-        int i6 = 1;
+        int contribution = 15000;
+        int buildup = 1;
         do {
-            sum5 += sum5 * 0.07;
-            i6 += 1;
-            if (i6 % 6 == 0) {
-                System.out.println("Месяц " + i6 + ", сумма накоплений: " + sum5 + " руб.");
+            contribution += contribution * 0.07;
+            buildup += 1;
+            if (buildup % 6 == 0) {
+                System.out.println("Месяц " + buildup + ", сумма накоплений: " + contribution + " руб.");
             }
-        } while (i6 < 9 * 12);
-        System.out.println("За 9 лет Василий накопит " + sum5 + " рублей");
+        } while (buildup < 9 * 12);
+        System.out.println("За 9 лет Василий накопит " + contribution + " рублей");
         System.out.println("");
 
         System.out.println("задание 7");
-        int i7 = 1;
-        int friday = 5;
+        int dayWeek = 5;
         do {
-            if (i7 == friday || i7 % 7 == 5) {
-                System.out.println("Сегодня пятница, " + i7 + "-е число. Необходимо подготовить отчет");
-            }
-            i7 += 1;
-        } while (i7 <= 31);
+            System.out.println("Сегодня пятница, " + dayWeek + "-е число. Необходимо подготовить отчет");
+            dayWeek += 7;
+        } while (dayWeek<=31);
         System.out.println("");
 
         System.out.println("задание 8");
         int yearStart = 1825;
         int yearFinish = 2125;
-        int c = yearStart;
+        int comet = yearStart;
         do {
-            if (c % 79 == 0) {
-                System.out.println(c);
+            if (comet % 79 == 0) {
+                System.out.println(comet);
             }
-            c += 1;
-        } while (c <= yearFinish);
-        System.out.println("");
+            comet += 1;
+        } while (comet <= yearFinish);
     }
 }
